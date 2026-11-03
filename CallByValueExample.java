@@ -15,3 +15,21 @@ public class CallByValueExample {
         num = 50; // Changes only the local copy inside this method
     }
 }
+
+
+// CallByReferenceDemo
+
+public class CallByReferenceDemo {
+    public static void main(String[] args) {
+        int[] number = { 10 }; // Array holding a single value
+
+        System.out.println("Before method: " + number[0]);
+        modifyValue(number);
+        System.out.println("After method:  " + number[0]);
+    }
+
+    // Modifies the original value inside the array
+    static void modifyValue(int[] num) {
+        num[0] = num[0] + 50;
+    }
+}
